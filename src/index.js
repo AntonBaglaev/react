@@ -1,3 +1,6 @@
+import React from "react"
+import * as ReactDOMClient from 'react-dom/client';
+
 // ReactDOM.render(React.createElement('input', {
 //     placeholder: "Help text",
 //     onClick: () => console.log("Clicked"),
@@ -15,9 +18,9 @@ const elements =(<div className="name">
         <h1>{helpText}</h1>
         <input placeholder={helpText} 
         onClick={inputClick} onMouseEnter={mouseOver} />
-        <p>{helpText == "Help text!" ? "Yes" : "No"}</p>
+        <p>{helpText === "Help text!" ? "Yes" : "No"}</p>
     </div>) 
 
-const app = document.getElementById("app")
+const app = ReactDOMClient.createRoot(document.getElementById("app"))
 
-ReactDOM.render(elements, app)
+app.render(elements)
