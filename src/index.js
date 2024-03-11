@@ -6,9 +6,16 @@ const mouseOver = () => console.log("Mouse Over")
 
 const helpText = "Help text!"
 
-//пишем компонент
-function App() {
+//пишем компоненты
+const Header = () => {
+    return (
+        <header>Шапка сайта</header>
+    )
+}
+
+const App = () => {
     return (<div className="name">
+     <Header />   
     <h1>{helpText}</h1>
     <input placeholder={helpText} 
     onClick={inputClick} onMouseEnter={mouseOver} />
