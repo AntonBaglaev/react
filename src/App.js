@@ -20,16 +20,16 @@ class App extends React.Component {
             <h1>{this.state.helpText}</h1>
             <h2>{this.state.userData}</h2>
             <input placeholder={this.state.helpText}
-                onChange={event => this.setState({userData: event.target.value})}
+                onChange={event => this.setState({ userData: event.target.value })}
                 onClick={this.inputClick} onMouseEnter={this.mouseOver} />
             <p>{this.state.helpText === "Help text!" ? "Yes" : "No"}</p>
             <Image image={logo} />
         </div>)
     }
 
-    inputClick() { 
+    inputClick() {
         this.setState({ helpText: "Changed" })
-        console.log("Clicked") 
+        console.log("Clicked")
     }
     mouseOver() { console.log("Mouse Over") }
 }
